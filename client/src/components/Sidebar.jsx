@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { LogOut, X } from "lucide-react";
 import { useAuth } from "../context/AuthContext.jsx";
 import { MENUS } from "./layout/sidebarMenus.js";
