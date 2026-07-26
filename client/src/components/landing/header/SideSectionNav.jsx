@@ -10,7 +10,7 @@ export default function SideSectionNav() {
   return (
     <aside
       aria-label="Section navigation"
-      className={`fixed right-3 sm:right-5 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-1.5 p-2 rounded-full border backdrop-blur-xl shadow-2xl transition-all duration-300 ${
+      className={`hidden xl:flex fixed right-3 sm:right-5 top-1/2 -translate-y-1/2 z-50 flex-col items-center gap-1.5 p-2 rounded-full border backdrop-blur-xl shadow-2xl transition-all duration-300 ${
         hideInFooter ? "opacity-0 pointer-events-none scale-90 translate-x-4" : "opacity-100 scale-100 translate-x-0"
       } ${
         theme === "dark"

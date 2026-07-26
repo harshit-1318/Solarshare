@@ -37,7 +37,7 @@ export default function HeroLeftContent({ stats }) {
       </p>
 
       {/* Call to Actions */}
-      <div className="pt-1 flex flex-wrap items-center gap-3">
+      <div className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
         <Link
           to="/register"
           className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-5 sm:px-6 py-2.5 text-sm sm:text-base font-bold text-slate-950 shadow-lg shadow-emerald-500/25 hover:bg-emerald-400 hover:scale-[1.02] active:scale-[0.98] transition duration-200"
