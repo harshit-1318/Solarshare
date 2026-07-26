@@ -8,10 +8,10 @@ export default function FooterNavColumn({ title, icon: Icon, titleColor, items }
 
   return (
     <div>
-      <h4 className={`text-xs font-extrabold uppercase tracking-wider ${titleColor} mb-2 flex items-center gap-1.5`}>
-        {Icon && <Icon size={14} />} {title}
+      <h4 className={`text-xs sm:text-sm font-black uppercase tracking-wider ${titleColor} mb-2.5 flex items-center gap-1.5`}>
+        {Icon && <Icon size={15} />} {title}
       </h4>
-      <ul className={`space-y-1.5 text-xs font-medium ${theme === "dark" ? "text-slate-300" : "text-slate-600"}`}>
+      <ul className={`space-y-1.5 sm:space-y-2 text-xs sm:text-[13px] font-semibold ${theme === "dark" ? "text-slate-300" : "text-slate-600"}`}>
         {items.map((item, idx) => (
           <li key={idx} className="group">
             {item.isRoute ? (

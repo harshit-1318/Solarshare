@@ -1,4 +1,5 @@
 import Header from "./header/Header.jsx";
+import SideSectionNav from "./header/SideSectionNav.jsx";
 import { useHeaderState, NAV_ITEMS } from "./header/useHeaderState.js";
 import Hero from "./hero/Hero.jsx";
 import HeroMockupCard from "./hero/HeroMockupCard.jsx";
@@ -25,6 +26,7 @@ export {
 
 export {
   Header,
+  SideSectionNav,
   useHeaderState,
   NAV_ITEMS,
   Hero,

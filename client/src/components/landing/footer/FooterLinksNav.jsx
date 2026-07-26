@@ -42,14 +42,14 @@ export default function FooterLinksNav() {
       <FooterNavColumn title="Platform Features" icon={Zap} titleColor="text-emerald-500" items={platformItems} />
 
       <div>
-        <h4 className="text-xs font-extrabold uppercase tracking-wider text-teal-500 mb-2 flex items-center gap-1.5">
-          <Building2 size={14} /> DISCOM Net-Metering
+        <h4 className="text-xs sm:text-sm font-black uppercase tracking-wider text-teal-500 mb-2.5 flex items-center gap-1.5">
+          <Building2 size={15} /> DISCOM Net-Metering
         </h4>
-        <ul className={`space-y-1.5 text-xs font-medium ${theme === "dark" ? "text-slate-300" : "text-slate-600"}`}>
+        <ul className={`space-y-1.5 sm:space-y-2 text-xs sm:text-[13px] font-semibold ${theme === "dark" ? "text-slate-300" : "text-slate-600"}`}>
           {discoms.map((d, i) => (
             <li key={i} className="flex items-center justify-between">
-              <span className={theme === "dark" ? "text-slate-300 font-medium" : "text-slate-700 font-medium"}>{d.name}</span>
-              <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono font-bold inline-flex items-center gap-1 border ${
+              <span className={theme === "dark" ? "text-slate-300 font-semibold" : "text-slate-700 font-semibold"}>{d.name}</span>
+              <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono font-extrabold inline-flex items-center gap-1 border ${
                 theme === "dark"
                   ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/30"
                   : "bg-emerald-100 text-emerald-800 border-emerald-300"

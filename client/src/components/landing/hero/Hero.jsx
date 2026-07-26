@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { ChevronDown } from "lucide-react";
 import HeroLeftContent from "./HeroLeftContent.jsx";
 import HeroMockupCard from "./HeroMockupCard.jsx";
 import api from "../../../api/axios.js";
@@ -60,6 +61,27 @@ export default function Hero() {
           <HeroMockupCard />
         </div>
       </div>
+
+      {/* Connected Energy Pulse Connector to Features */}
+      <a
+        href="#features"
+        aria-label="Scroll to Features"
+        className="absolute bottom-2.5 left-1/2 -translate-x-1/2 z-20 group flex flex-col items-center gap-0.5 transition-transform duration-300 hover:scale-110 cursor-pointer"
+      >
+        <span className={`text-[10px] font-extrabold uppercase tracking-widest transition-colors ${
+          theme === "dark" ? "text-emerald-400/80 group-hover:text-emerald-300" : "text-emerald-700/80 group-hover:text-emerald-600"
+        }`}>
+          Features
+        </span>
+        <div className={`p-1 rounded-full border shadow-lg transition-all duration-300 ${
+          theme === "dark"
+            ? "bg-slate-900/90 border-emerald-500/40 text-emerald-400 group-hover:border-emerald-400 group-hover:bg-emerald-500/10 shadow-emerald-950/50"
+            : "bg-white/90 border-emerald-300 text-emerald-600 group-hover:border-emerald-500 group-hover:bg-emerald-50 shadow-emerald-200/50"
+        }`}>
+          <ChevronDown size={14} className="animate-bounce" />
+        </div>
+      </a>
     </section>
   );
 }
+

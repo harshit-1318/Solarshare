@@ -82,7 +82,7 @@ export default function Header() {
 
       {/* Top Scroll Progress Indicator */}
       <div
-        className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 transition-all duration-150 ease-out"
+        className="absolute bottom-0 left-0 h-1 rounded-r-full bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 shadow-[0_0_12px_rgba(16,185,129,0.8)] transition-all duration-150 ease-out z-50"
         style={{ width: `${scrollProgress}%` }}
       />
     </header>

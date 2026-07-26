@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   Header,
+  SideSectionNav,
   Hero,
   Features,
   GridFlowPreview,
@@ -39,6 +40,7 @@ export default function Landing() {
       theme === "dark" ? "bg-slate-950 text-slate-100" : "bg-white text-slate-900"
     }`}>
       <Header />
+      <SideSectionNav />
       <main>
         <Hero />
         <Features />

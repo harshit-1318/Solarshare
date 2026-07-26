@@ -20,8 +20,8 @@ export default function FAQ() {
   });
 
   return (
-    <section id="faq" className={`relative overflow-hidden pt-2 sm:pt-3 pb-2 h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] flex flex-col justify-between border-b scroll-mt-[72px] transition-colors duration-300 ${
-      theme === "dark" ? "bg-slate-900 text-white border-slate-800" : "bg-white text-slate-900 border-slate-200"
+    <section id="faq" className={`relative overflow-hidden pt-2.5 sm:pt-4 pb-3 h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] flex flex-col justify-between border-b scroll-mt-[72px] transition-colors duration-300 ${
+      theme === "dark" ? "bg-slate-950 text-white border-slate-800/80" : "bg-white text-slate-900 border-slate-200"
     }`}>
       <div className={`absolute top-1/3 left-10 w-96 h-96 rounded-full blur-[140px] pointer-events-none ${
         theme === "dark" ? "bg-emerald-500/10" : "bg-emerald-100/60"
