@@ -9,7 +9,7 @@ export default function Footer() {
   const { theme } = useTheme();
 
   return (
-    <footer className={`relative overflow-hidden border-t h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] flex flex-col justify-between py-2.5 sm:py-3.5 transition-colors duration-300 ${
+    <footer className={`relative overflow-hidden border-t py-8 sm:py-12 transition-colors duration-300 ${
       theme === "dark" ? "bg-slate-950 text-white border-slate-800/80" : "bg-white text-slate-900 border-slate-200"
     }`}>
       {/* Background Mesh Glow Effects */}
@@ -20,7 +20,7 @@ export default function Footer() {
         theme === "dark" ? "bg-teal-500/10" : "bg-teal-100/50"
       }`} />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 w-full h-full flex flex-col justify-between space-y-2">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col justify-between space-y-6">
         {/* Top Grid: Brand Overview & Newsletter Card */}
         <div className={`grid grid-cols-1 lg:grid-cols-12 gap-5 pb-3 border-b ${
           theme === "dark" ? "border-slate-800/80" : "border-slate-200/90"

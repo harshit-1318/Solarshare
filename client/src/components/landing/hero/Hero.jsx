@@ -32,7 +32,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="top" className={`relative overflow-hidden py-2 sm:py-3 h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] flex items-center justify-center border-b transition-colors duration-300 ${
+    <section id="top" className={`relative overflow-hidden py-6 sm:py-8 min-h-[calc(100vh-73px)] flex items-center justify-center border-b transition-colors duration-300 ${
       theme === "dark"
         ? "bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white border-slate-800"
         : "bg-gradient-to-b from-white via-slate-50/50 to-white text-slate-900 border-slate-200/80"

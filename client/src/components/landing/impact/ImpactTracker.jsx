@@ -31,7 +31,7 @@ export default function ImpactTracker() {
   const currentStats = formatRealStats(realDbStats, selectedState);
 
   return (
-    <section id="impact" className={`relative overflow-hidden py-2.5 sm:py-3.5 h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] flex flex-col justify-center border-b scroll-mt-[72px] transition-colors duration-300 ${
+    <section id="impact" className={`relative overflow-hidden py-6 sm:py-8 min-h-[calc(100vh-73px)] flex flex-col justify-center border-b scroll-mt-[72px] transition-colors duration-300 ${
       theme === "dark" ? "bg-slate-900 text-white border-slate-800" : "bg-white text-slate-900 border-slate-200"
     }`}>
       <div className={`absolute top-0 left-1/3 w-[500px] h-[500px] rounded-full blur-[140px] pointer-events-none ${

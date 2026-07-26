@@ -11,7 +11,7 @@ export default function Features() {
   const filteredFeatures = filter === "all" ? allFeatures : allFeatures.filter((f) => f.category === filter);
 
   return (
-    <section id="features" className={`relative overflow-hidden py-2 sm:py-3 h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] flex flex-col justify-center border-t border-b scroll-mt-[72px] transition-colors duration-300 ${
+    <section id="features" className={`relative overflow-hidden py-6 sm:py-8 min-h-[calc(100vh-73px)] flex flex-col justify-center border-t border-b scroll-mt-[72px] transition-colors duration-300 ${
       theme === "dark" ? "bg-slate-900 text-white border-slate-800" : "bg-white text-slate-900 border-slate-200"
     }`}>
       <div className={`absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-60 pointer-events-none ${

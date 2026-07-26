@@ -37,7 +37,7 @@ export default function SavingsCalculator() {
   const treesEquivalent = Math.round((estimatedUnits * 12 * 0.85) / 20);
 
   return (
-    <section id="calculator" className={`relative overflow-hidden py-2 sm:py-3 h-[calc(100vh-73px)] max-h-[calc(100vh-73px)] flex flex-col justify-center border-b scroll-mt-[72px] transition-colors duration-300 ${
+    <section id="calculator" className={`relative overflow-hidden py-6 sm:py-8 min-h-[calc(100vh-73px)] flex flex-col justify-center border-b scroll-mt-[72px] transition-colors duration-300 ${
       theme === "dark" ? "bg-slate-900 text-white border-slate-800" : "bg-white text-slate-900 border-slate-200"
     }`}>
       <div className={`absolute top-0 right-1/4 w-[500px] h-[500px] rounded-full blur-[150px] pointer-events-none ${
