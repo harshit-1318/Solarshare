@@ -1,81 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ChevronUp, ChevronDown } from "lucide-react";
 import { useTheme } from "../../../context/ThemeContext.jsx";
-
-const SECTIONS = [
-  { id: "top", label: "Home", href: "#top" },
-  { id: "features", label: "Features", href: "#features" },
-  { id: "how-it-works", label: "How It Works", href: "#how-it-works" },
-  { id: "grid-flow", label: "Live Grid", href: "#grid-flow" },
-  { id: "calculator", label: "Calculator", href: "#calculator" },
-  { id: "impact", label: "Impact", href: "#impact" },
-  { id: "faq", label: "FAQ", href: "#faq" },
-];
+import { useSideSectionNav } from "./useSideSectionNav.js";
 
 export default function SideSectionNav() {
   const { theme } = useTheme();
-  const [activeSectionId, setActiveSectionId] = useState("top");
-  const [hideInFooter, setHideInFooter] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const docHeight = document.documentElement.scrollHeight;
-
-      // Auto-hide when user scrolls down to the Footer
-      if (scrollY + windowHeight >= docHeight - 380) {
-        setHideInFooter(true);
-      } else {
-        setHideInFooter(false);
-      }
-
-      if (scrollY < 120) {
-        setActiveSectionId("top");
-        return;
-      }
-
-      const checkPoint = scrollY + 250;
-      let matchedId = "top";
-
-      for (let i = SECTIONS.length - 1; i >= 0; i--) {
-        const sec = SECTIONS[i];
-        if (sec.id === "top") continue;
-        const el = document.getElementById(sec.id);
-        if (el) {
-          const offsetTop = el.offsetTop;
-          if (offsetTop <= checkPoint) {
-            matchedId = sec.id;
-            break;
-          }
-        }
-      }
-
-      setActiveSectionId(matchedId);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleNavClick = (e, id) => {
-    if (e) e.preventDefault();
-    setActiveSectionId(id);
-    if (id === "top") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
-    }
-    const el = document.getElementById(id);
-    if (el) {
-      const offsetTop = el.getBoundingClientRect().top + window.pageYOffset - 72;
-      window.scrollTo({ top: Math.max(0, offsetTop), behavior: "smooth" });
-    }
-  };
-
-  const currentIndex = SECTIONS.findIndex((s) => s.id === activeSectionId);
-  const prevSection = SECTIONS[Math.max(0, currentIndex - 1)];
-  const nextSection = SECTIONS[Math.min(SECTIONS.length - 1, currentIndex + 1)];
+  const { SECTIONS, activeSectionId, hideInFooter, handleNavClick, currentIndex, prevSection, nextSection } = useSideSectionNav();
 
   return (
     <aside
@@ -120,7 +50,6 @@ export default function SideSectionNav() {
               title={sec.label}
               aria-label={sec.label}
             >
-              {/* Dot */}
               <span
                 className={`block rounded-full transition-all duration-300 ${
                   isActive
@@ -130,8 +59,6 @@ export default function SideSectionNav() {
                     : "w-2 h-2 bg-slate-400 group-hover:bg-slate-700 group-hover:scale-125"
                 }`}
               />
-
-              {/* Hover Tooltip Popup (Opens Left) */}
               <span
                 className={`absolute right-full mr-3.5 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 shadow-xl pointer-events-none border ${
                   theme === "dark"
@@ -167,5 +94,3 @@ export default function SideSectionNav() {
     </aside>
   );
 }
-
-

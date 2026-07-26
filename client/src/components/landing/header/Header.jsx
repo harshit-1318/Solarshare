@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 relative ${
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled
           ? theme === "dark"
             ? "bg-slate-900/90 backdrop-blur-xl border-b border-slate-800/90 shadow-xl py-3 text-white"
