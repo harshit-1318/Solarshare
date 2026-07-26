@@ -21,6 +21,7 @@ import matchingRoutes from "./routes/matchingRoutes.js";
 import notificationRoutes from "./routes/notificationRoutes.js";
 import certificateRoutes from "./routes/certificateRoutes.js";
 import disputeRoutes from "./routes/disputeRoutes.js";
+import publicRoutes from "./routes/publicRoutes.js";
 
 
 dotenv.config();
@@ -63,6 +64,7 @@ app.use("/api/matching", matchingRoutes);
 app.use("/api/notifications", notificationRoutes);
 app.use("/api/certificates", certificateRoutes);
 app.use("/api/disputes", disputeRoutes);
+app.use("/api/public", publicRoutes);
 
 
 // Central error handler

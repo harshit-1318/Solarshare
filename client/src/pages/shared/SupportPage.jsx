@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Header from "../../components/landing/Header.jsx";
-import Footer from "../../components/landing/Footer.jsx";
+import Header from "../../components/landing/header/Header.jsx";
+import Footer from "../../components/landing/footer/Footer.jsx";
 import DashboardLayout from "../../components/DashboardLayout.jsx";
 import { useAuth } from "../../context/AuthContext.jsx";
 import SupportHero from "../../components/support/SupportHero.jsx";

@@ -44,3 +44,27 @@ export const getTransactionStats = async (req, res, next) => {
     });
   } catch (err) { next(err); }
 };
+
+export const getPublicRecentTransactions = async (req, res, next) => {
+  try {
+    const transactions = await Transaction.find({ status: "completed" })
+      .populate("buyer", "name address")
+      .populate("seller", "name address")
+      .sort({ createdAt: -1 })
+      .limit(10);
+
+    const formatted = transactions.map((t) => ({
+      _id: t._id,
+      sellerName: t.seller?.name || "Solar Prosumer",
+      buyerName: t.buyer?.name || "Energy Consumer",
+      location: t.seller?.address?.city ? `${t.seller.address.city}${t.seller.address.state ? ", " + t.seller.address.state : ""}` : "India",
+      energyAmountKwh: t.kwh,
+      pricePerKwh: t.pricePerKwh,
+      totalAmount: t.totalAmount,
+      createdAt: t.createdAt,
+    }));
+
+    res.json(formatted);
+  } catch (err) { next(err); }
+};
+
