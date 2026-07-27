@@ -36,7 +36,7 @@ export default function Landing() {
   };
 
   return (
-    <div className={`min-h-screen font-body antialiased selection:bg-emerald-500 selection:text-white relative transition-colors duration-300 ${
+    <div className={`min-h-screen w-full overflow-x-hidden font-body antialiased selection:bg-emerald-500 selection:text-white relative transition-colors duration-300 ${
       theme === "dark" ? "bg-slate-950 text-slate-100" : "bg-white text-slate-900"
     }`}>
       <Header />

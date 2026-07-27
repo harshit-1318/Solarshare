@@ -19,12 +19,13 @@ export default function HeroMockupHeaderBar() {
           <Zap size={15} className="text-amber-500 animate-pulse shrink-0" />
         </div>
         <div className="min-w-0">
-          <h4 className={`font-bold font-heading text-xs sm:text-sm whitespace-nowrap truncate leading-tight ${
+          <h4 className={`font-bold font-heading text-xs sm:text-sm truncate leading-tight ${
             theme === "dark" ? "text-white" : "text-slate-900"
           }`}>
-            BESCOM Smart Substation Hub
+            <span className="hidden sm:inline">BESCOM Smart Substation Hub</span>
+            <span className="sm:hidden">BESCOM Smart Hub</span>
           </h4>
-          <p className={`text-[10px] font-mono whitespace-nowrap truncate mt-0.5 ${
+          <p className={`text-[10px] font-mono truncate mt-0.5 ${
             theme === "dark" ? "text-slate-400" : "text-slate-500"
           }`}>
             Discom Grid Node #KA-8802

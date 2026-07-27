@@ -10,22 +10,22 @@ export default function HeroLeftContent({ stats }) {
   return (
     <div className="text-left lg:col-span-7 space-y-3.5 lg:space-y-4">
       {/* Top Live Badge */}
-      <div className={`inline-flex items-center gap-2 rounded-full border px-3.5 py-1 text-xs font-semibold shadow-sm backdrop-blur-md transition-colors ${
+      <div className={`inline-flex max-w-full items-center gap-1.5 sm:gap-2 rounded-full border px-3 py-1 text-[11px] sm:text-xs font-semibold shadow-sm backdrop-blur-md transition-colors ${
         theme === "dark" ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-400" : "bg-emerald-100/90 border-emerald-200/90 text-emerald-800"
       }`}>
-        <span className="relative flex h-2 w-2">
+        <span className="relative flex h-2 w-2 shrink-0">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
         </span>
-        <Sparkles size={13} className={theme === "dark" ? "text-emerald-400" : "text-emerald-600"} />
-        <span>India's #1 P2P Solar Energy Trading Infrastructure</span>
+        <Sparkles size={13} className={`shrink-0 ${theme === "dark" ? "text-emerald-400" : "text-emerald-600"}`} />
+        <span className="truncate">India's #1 P2P Solar Grid Infrastructure</span>
       </div>
 
       {/* Headline */}
-      <h1 className={`font-heading text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] ${
+      <h1 className={`font-heading text-xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.15] break-words ${
         theme === "dark" ? "text-white" : "text-slate-900"
       }`}>
-        Trade Clean <br />
+        Trade Clean <br className="hidden sm:inline" />
         Energy <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-500">with Your Community</span>
       </h1>
 
@@ -57,7 +57,7 @@ export default function HeroLeftContent({ stats }) {
       </div>
 
       {/* Key Trust Highlights Line */}
-      <div className={`pt-0.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-semibold ${
+      <div className={`pt-0.5 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-1.5 sm:gap-x-4 text-xs font-semibold ${
         theme === "dark" ? "text-slate-400" : "text-slate-600"
       }`}>
         <span className="flex items-center gap-1.5">

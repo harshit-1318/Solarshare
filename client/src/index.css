@@ -4,8 +4,8 @@
 
 @layer base {
   * { @apply border-slate-200; }
-  html { @apply bg-slate-50 scroll-smooth; }
-  body { @apply min-w-[320px] bg-slate-50 font-body text-slate-900 antialiased; }
+  html { @apply bg-slate-50 scroll-smooth overflow-x-hidden max-w-full; }
+  body { @apply min-w-[320px] bg-slate-50 font-body text-slate-900 antialiased overflow-x-hidden max-w-full; }
   h1, h2, h3, h4 { @apply font-heading; }
   button, input, select { @apply focus:outline-none; }
 }
